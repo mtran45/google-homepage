@@ -1,11 +1,20 @@
-body {
-  font-family: arial;
+html, body {
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%
+  position: relative;
 }
 
 /* Central content */
 
-.container {
-  padding-top: 150px;
+#content {
+  padding-top: 170px;
+  padding-bottom: 40px;
   width: 584px;
   margin: 0 auto;
 }
@@ -62,20 +71,24 @@ input[type="submit"]:hover {
   color: #222;
 }
 
-/* Nav bar */
+/* Header */
 
-nav > ul {
+ul {
   display: flex;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
+}
+
+#header > ul {
+  padding: 15px;
   overflow: hidden;
   float: right;
   height: 30px;
 }
 
-nav > ul > li {
+#header > ul > li {
   float: left;
   margin: 0 10px;
   font-size: 13px;
@@ -114,6 +127,14 @@ a:hover {
   border-radius: 50%;
 }
 
+#apps:hover {
+  opacity: 1;
+}
+
+#notifications:hover {
+  background-color: #000;
+}
+
 #user-menu {
   display: flex;
   align-items: center;
@@ -127,4 +148,38 @@ a:hover {
   width: 100%;
   text-align: center;
   color: #FFF;
+}
+
+/* Footer */
+
+#footer {
+  background-color: #F2F2F2;
+  border-top: 1px solid #E4E4E4;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#footer ul {
+  height: 100%;
+}
+
+#footer li {
+  padding-left: 27px;
+  font-size: small;
+}
+
+#footer li a {
+  color: #666;
+}
+
+#footer-left {
+  float: left;
+}
+
+#footer-right {
+  float: right;
+  padding-right: 27px;
 }
