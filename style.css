@@ -1,3 +1,7 @@
+body {
+  font-family: arial;
+}
+
 /* Central content */
 
 .container {
@@ -21,7 +25,6 @@
 
 #country {
   color: #4285F4;
-  font-family: arial;
 }
 
 #search-box {
@@ -30,6 +33,11 @@
   height: 40px;
   border: 1px solid #D9D9D9;
   padding: 0 10px;
+}
+
+input#search-box:focus {
+  border-color: #4D90FE;
+  outline: none;
 }
 
 #button-container {
@@ -43,30 +51,37 @@ input[type="submit"] {
   color: #757575;
   font-size: 13px;
   font-weight: bold;
-  font-family: arial;
   min-width: 54px;
   padding: 7px 16px;
   margin: 0 2px;
 }
 
+input[type="submit"]:hover {
+  border-color: #C6C6C6;
+  background-color: #F8F8F8;
+  color: #222;
+}
+
 /* Nav bar */
 
 nav > ul {
+  display: flex;
+  align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 10px;
   overflow: hidden;
   float: right;
+  height: 30px;
 }
 
 nav > ul > li {
   float: left;
   margin: 0 10px;
-  font-family: arial;
   font-size: 13px;
 }
 
-nav #user {
+#user {
   opacity: 0.55;
 }
 
@@ -75,7 +90,41 @@ a {
   text-decoration: none;
 }
 
-nav #user-menu {
-  background-color: maroon;
+a:hover {
+  text-decoration: underline;
+}
+
+#apps, #notifications {
+  background-image: url("https://ssl.gstatic.com/gb/images/i1_1967ca6a.png");
+  background-size: 528px 68px;
+}
+
+#apps {
+  width: 30px;
+  height: 30px;
+  background-position: -132px -38px;
+  opacity: 0.55;
+}
+
+#notifications {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.55);
+  background-position: -194px -21px;
   border-radius: 50%;
+}
+
+#user-menu {
+  display: flex;
+  align-items: center;
+  background-color: #C2185B;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+#user-initial {
+  width: 100%;
+  text-align: center;
+  color: #FFF;
 }
